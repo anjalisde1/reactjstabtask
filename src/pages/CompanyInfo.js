@@ -16,7 +16,7 @@ const CompanyInfo = ({ updateProgress }) => {
   const DropzoneBox = ({ title, description, setFile, filePreview, width, height,border,backcolor }) => {
     const { getRootProps, getInputProps } = useDropzone({
       accept: { "image/*": [] },
-      maxSize: 5 * 1024 * 1024, // Max 5 MB
+      maxSize: 5 * 1024 * 1024,
       onDrop: (acceptedFiles) => {
         if (acceptedFiles.length > 0) {
           handleFileChange(acceptedFiles[0], setFile);
